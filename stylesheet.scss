@@ -1,0 +1,372 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/////////////////////////////////////////		 	VARIABLES		/////////////////////////////////////////////////////////////////////////////////////////////
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Dancing+Script&family=Exo+2:wght@500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Roboto&family=Teko:wght@400;600&display=swap');
+
+@import './animations_mediaQueris.scss';
+
+@mixin checked_msj {
+	font-family: 'Teko', sans-serif;
+	font-weight: 900;
+	letter-spacing: 1px;
+	text-align: center;
+	color: #201a255d;
+	border: 2px solid #2fc900;
+	box-shadow: inset 0 0 5px #2fc9007d;
+}
+
+@mixin wrong_msj {
+	color: #ff0000;
+	position: absolute;
+	font-size: .7em;
+}
+
+@mixin cards {
+	height: 12em;
+	width: 22em;
+	border-radius: .6em;
+	box-shadow: .5em .5em .9em #2727278a;
+}
+
+@mixin center-elements {
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+@mixin check_icon {
+	background-color: $bgc_ligth;
+	border-radius: 1em;
+	height: .2em;
+	display: block;
+	position: relative;
+}
+
+$bgc_ligth: #f3f3f4;
+$btn-color: #201a25;
+$font-exo-bold :'Exo 2',
+sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+body,
+html {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: $font-exo-bold;
+	overflow: hidden;
+
+	.main-section {
+		display: flex;
+		margin: 0;
+		height: 100vh;
+
+		#cards {
+			background: linear-gradient(to left top,#35006aef,#46007b, #2b0231,#202b5c,#c300ff);
+			width: 35%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+			gap: 2em;
+			box-shadow: 1em 1em 2em #201a25;
+
+			.front-card {
+				@include cards();
+				position: relative;
+				left: 2em;
+				background: linear-gradient(to left top, #9400e9, #0089c9, #9f21bb, #9a01f3);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				color: $bgc_ligth;
+				text-shadow: 1px 1px 1px #201a25;
+
+				.avatar-card {
+					p {
+						background: url('./images/avatar.png') no-repeat center center;
+						background-size: cover;
+						height: 3em;
+						width: 3em;
+						margin: 0 1em;
+						border-radius: 50%;
+						transform: translateY(.7em);
+					}
+				}
+
+				.card-number {
+					text-align: center;
+					letter-spacing: 4px;
+					font-weight: bolder;
+					font-size: 1.4em;
+					font-family: $font-roboto;
+					transform: translateY(1em);
+
+				}
+
+				.footer-card {
+					display: flex;
+					justify-content: space-between;
+					padding: 0 1em;
+					text-transform: capitalize;
+
+					.cardholder-name {
+						font-weight: bold;
+						font-size: 1.2em;
+						letter-spacing: 2px
+					}
+				}
+
+			}
+
+			.back-card {
+				@include cards();
+				position: relative;
+				left: 8em;
+				background-color: #e6e6e6;
+
+				hr {
+					margin-top: 1.3em;
+					height: 2.5em;
+					background-color: $btn-color;
+					border: 1px solid $btn-color;
+				}
+
+				:nth-child(2) {
+					background-color: #a6a6a6;
+					border-radius: .2em;
+					line-height: 2em;
+					padding-right: 1em;
+					margin: 0 1.3em;
+					text-align: end;
+					font-family: $font-roboto;
+					letter-spacing: 2px;
+					color: $bgc_ligth;
+					text-shadow: 1px 1px 1px #201a25;
+
+					&::after {
+						content: "";
+						display: block;
+						position: absolute;
+						right: 1.5em;
+						bottom: 35%;
+						width: 3.5em;
+						height: 3.5em;
+						border: 3px solid #9400e9;
+						border-radius: 50%;
+					}
+				}
+
+				:nth-child(3) {
+					text-align: center;
+					padding: 1em;
+					opacity: .4;
+					line-height: 2em;
+					text-decoration: line-through 7px #707070;
+					margin: 0 5em;
+					font-weight: bolder;
+					font-size: .4em;
+					transform: translateY(-1em)
+				}
+			}
+		}
+
+		#form {
+			@include center-elements();
+			background-color: $bgc_ligth;
+			width: 65%;
+
+			.form-section {
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+
+				.cheked {
+					@include checked_msj();
+				}
+
+				span {
+					color: #ff0000;
+				}
+
+				.label-form {
+					transform: translateY(1em);
+				}
+
+				input {
+					padding: .8em .5em;
+					border-radius: .4em;
+					outline: none;
+					border: 1px solid #201a253e;
+					margin-top: .4em;
+					text-transform: capitalize;
+					transition: all 200ms;
+
+					&:focus {
+						border: 1px solid #9400e9;
+						font-family: $font-roboto;
+						font-weight: bolder;
+						color: #8544be;
+					}
+
+					&::placeholder {
+						font-style: italic;
+						opacity: .7;
+						padding-left: .5em;
+						font-size: .8em;
+					}
+				}
+
+				.alert-msj-name {
+					@include wrong_msj();
+					translate: (0 6em);
+				}
+
+				.alert-msj-number {
+					@include wrong_msj();
+					translate: (0 15em);
+				}
+
+				.section-date-cvc {
+					display: flex;
+					gap: 1em;
+					margin-top: 2em;
+
+					.date-div {
+						display: flex;
+						flex-direction: column;
+
+						.info-msj {
+							@include wrong_msj();
+						}
+
+						.form-input-month,
+						.form-input-year {
+							width: 4em;
+						}
+					}
+
+					.cvc-div {
+						display: flex;
+						flex-direction: column;
+						width: 4em;
+
+						.alert-msj-cvc {
+							@include wrong_msj();
+							min-width: max-content;
+							translate: (0 4.5em);
+						}
+					}
+				}
+
+				.form-btn {
+					font-family: $font-exo-bold;
+					color: $bgc_ligth;
+					background-color: #848484a5;
+					cursor: pointer;
+					padding: .5em;
+					border: none;
+					border-radius: .3em;
+					margin-top: .5em;
+					opacity: .6;
+
+					&:hover {
+						background-color: $btn-color;
+						opacity: 1;
+						transform: scale(1.1);
+						transition: all 500ms;
+						box-shadow: 0 .7em .5em #201a25a1;
+
+					}
+				}
+			}
+		}
+
+		.confirm-submit-msj {
+			display: none;
+			position: absolute;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.confirm-submit-h1 {
+				transition: all 1s;
+				text-align: center;
+				flex-wrap: wrap;
+				letter-spacing: 4px;
+				font-weight: 700;
+				font-family: $font-roboto;
+			}
+
+			:nth-child(3) {
+				color: #201a2565;
+				font-family: $font-exo-bold;
+				letter-spacing: 1px;
+				font-weight: 600;
+				transform: translateY(-1.5em);
+			}
+
+			.check_icon {
+				background: linear-gradient(to left top, #715085, #ae3bc8, #ecdcf6);
+				height: 4.2em;
+				width: 4.2em;
+				border-radius: 50%;
+				margin-bottom: 2em;
+
+				:nth-child(1) {
+					@include check_icon();
+					top: 2em;
+					width: 2em;
+					left: 1.4em;
+					transform: rotate(-40deg);
+				}
+
+				:nth-child(2) {
+					@include check_icon();
+					top: 2.2em;
+					width: .7em;
+					left: 1.13em;
+					transform: rotate(-130deg);
+				}
+			}
+
+			.confirm-submit-btn {
+				background-color: $btn-color;
+				color: $bgc_ligth;
+				border: none;
+				width: 20em;
+				padding: 1em;
+				font-family: $font-exo-bold;
+				border-radius: .4em;
+				margin-top: 1em;
+				cursor: pointer;
+
+				&:hover {
+					transform: scale(1.1);
+					transition: all 500ms;
+					box-shadow: 0 1em .5em #201a25a1;
+
+				}
+			}
+		}
+	}
+
+	.attribution {
+		position: absolute;
+		bottom: 1em;
+		right: 1em;
+		font-size: 0.7em;
+		text-align: center;
+
+		a {
+			color: #9f04f9;
+			font-weight: bolder;
+		}
+	}
+
+}

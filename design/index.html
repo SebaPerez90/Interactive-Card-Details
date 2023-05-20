@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+
+  <main class="main-section">
+
+    <section id="cards">
+      <div class="front-card">
+        <div class="avatar-card">
+          <p></p>
+        </div>
+        <div>
+          <p class="card-number">0000 0000  0000 0000</p>
+          <div class="footer-card">
+            <p class="cardholder-name">Jane Appleseed</p>
+            <div style="display: flex;transform: translateY(.6em);">
+              <p class="exp-month">--</p>
+              <p>/</p>
+              <p class="exp-year">--</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="back-card">
+        <hr>
+        <div>
+          <p class="cvc-number">000</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem debitis cupiditate, itaque dignissimos eligendi dolor aut sit magnam sed fugit non nesciunt ratione quod id consequuntur ipsa, eum quis? Ullam?</p>
+      </div>
+    </section>
+
+    <section id="form">
+      <form class="form-section">
+        <label class="label-form">Cardholder name <span>*</span></label>
+        <input 
+          required
+          class="form-input-name"
+          type="text" 
+          name="card-name" 
+          placeholder="ex. Jane Appleseed">
+        <label class="label-form">Card number <span>*</span></label>
+        <input 
+          required
+          class="form-input-number"
+          type="text" 
+          name="card-number" 
+          placeholder="ex. 1234 5678 9123 0000">
+
+        <div class="section-date-cvc">
+          <div class="date-div">
+            <label>Exp. date (mm/yy) <span>*</span></label>
+            <div>
+              <input 
+                required
+                class="form-input-month"
+                type="text" 
+                name="exp-month" 
+                placeholder="ex. mm">
+              <input 
+                required
+                class="form-input-year"
+                type="text" 
+                name="exp-year" 
+                placeholder="ex. yy">
+            </div>
+          </div>
+
+          <div class="cvc-div">
+            <label>cvc <span>*</span></label>
+            <input 
+              required
+              class="cvc-code-number"
+              type="text" 
+              name="cvc" 
+              placeholder="ex. 123">
+          </div>
+        </div>
+
+        <button class="form-btn">Confirm</button>
+      </form>
+      <div class="confirm-submit-msj">
+        <div class="check_icon">
+          <span></span>
+          <span></span>
+        </div>
+          <h1 class="confirm-submit-h1">Thank you <strong class="user_name" style="text-transform: capitalize;"></strong>!</h1> 
+          <p>We've added your card details.</p>
+          <button class="confirm-submit-btn">Continue</button>
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/SebaPerez90" target="_blank">Seba Perez</a>
+  </div>
+</footer>
+
+</html>
