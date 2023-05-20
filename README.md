@@ -12,7 +12,8 @@
 
 <br>
 
-## The challenge :**Real-Time Updates & Error Handling: Fill the Form and Experience Seamless Card Details Processing!.**
+## The challenge :
+**Real-Time Updates & Error Handling: Fill the Form and Experience Seamless Card Details Processing!.**
 
 Your challenge is to build out this interactive card details form and get it looking as close to the design as possible.
 
