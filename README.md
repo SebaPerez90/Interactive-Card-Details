@@ -27,7 +27,7 @@ Your users should be able to:
 - See hover, active, and focus states for interactive elements on the page
 
 <br>
-<hr>
+
 
 # Desktop Design
 
@@ -41,7 +41,6 @@ Your users should be able to:
 
 <br>
 
-<hr>
 
 ##  Expected behaviour : 
 
