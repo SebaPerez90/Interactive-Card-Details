@@ -50,7 +50,7 @@ Your users should be able to:
 <strong>✔️ Validate the form fields when the form is submitted</strong><br>
 <strong>✔️ If there are no errors, display the completed state</strong><br>
 <strong>✔️ Reset the form when the user clicks "Continue" on the completed state</strong><br>
-<strong>✔️ View the optimal layout depending on their device's screen size</strong><br><br>
+
 
 **Desktop :**
 
