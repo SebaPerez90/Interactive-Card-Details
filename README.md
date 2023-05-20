@@ -39,9 +39,6 @@ Your users should be able to:
 <img src="./design/mobile-design.jpg">
 
 
-## Welcome! 👋
-<hr>
-
 <br>
 
 <hr>
