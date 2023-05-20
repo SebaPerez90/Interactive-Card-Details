@@ -3,7 +3,6 @@
 
 <h1 align=center>Frontend Mentor : <strong>"Interactive card details form"</strong></h1>
 
-**Real-Time Updates & Error Handling: Fill the Form and Experience Seamless Card Details Processing!.**
 
 ## Author
 
@@ -13,7 +12,7 @@
 
 <br>
 
-## The challenge 
+## The challenge :**Real-Time Updates & Error Handling: Fill the Form and Experience Seamless Card Details Processing!.**
 
 Your challenge is to build out this interactive card details form and get it looking as close to the design as possible.
 
