@@ -11,21 +11,6 @@
 
 <br>
 
-# Desktop Design
-
-<img src="./design/desktop-design.jpg">
-
-<br>
-
-# Mobile Design
-<img src="./design/mobile-design.jpg">
-
-
-## Welcome! 👋
-<hr>
-
-<br>
-
 ## The challenge 
 
 Your challenge is to build out this interactive card details form and get it looking as close to the design as possible.
@@ -42,6 +27,23 @@ Your users should be able to:
 - See hover, active, and focus states for interactive elements on the page
 
 <br>
+<hr>
+
+# Desktop Design
+
+<img src="./design/desktop-design.jpg">
+
+<br>
+
+# Mobile Design
+<img src="./design/mobile-design.jpg">
+
+
+## Welcome! 👋
+<hr>
+
+<br>
+
 <hr>
 
 ##  Expected behaviour : 
