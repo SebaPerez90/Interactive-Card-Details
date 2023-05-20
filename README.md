@@ -2,6 +2,7 @@
 ### EN 🌏
 
 <h1 align=center>Frontend Mentor : <strong>"Interactive card details form"</strong></h1>
+
 **Real-Time Updates & Error Handling: Fill the Form and Experience Seamless Card Details Processing!.**
 
 ## Author
